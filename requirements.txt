@@ -1,0 +1,6 @@
+pulp
+pandas
+numpy
+plotly
+streamlit
+locale
