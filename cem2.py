@@ -20,7 +20,10 @@ import locale
 # ---------------------------
 # Locale Ayarları: ABD sayısal formatı (binlik ayracı nokta, ondalık ayracı virgül)
 # ---------------------------
-locale.setlocale(locale.LC_NUMERIC, 'en_US.UTF-8')
+try:
+    locale.setlocale(locale.LC_NUMERIC, 'en_US.UTF-8')  # Varsayılan
+except locale.Error:
+    locale.setlocale(locale.LC_NUMERIC, 'C')  # Alternatif
 
 # ---------------------------
 # 1. VERİ SETLERİ VE PARAMETRELER (TL cinsinden)
